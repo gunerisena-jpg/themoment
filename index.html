@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Occasion — Music for the Moment</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0f0e0d;
+      --bg2: #161412;
+      --bg3: #1e1b18;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8e0d4;
+      --muted: #7a7068;
+      --accent: #c8975a;
+      --accent-glow: rgba(200,151,90,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 3.5rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(200,151,90,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .site-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .tagline {
+      margin-top: 1rem;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── CATEGORIES NAV ── */
+    .categories {
+      padding: 3rem 2rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .categories-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .cat-btn {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.1rem 1rem;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cat-btn:hover {
+      border-color: rgba(200,151,90,0.3);
+      background: var(--bg3);
+    }
+
+    .cat-btn.active {
+      border-color: var(--accent);
+      background: var(--bg3);
+    }
+
+    .cat-btn.active::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--accent-glow);
+      pointer-events: none;
+    }
+
+    .cat-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .cat-name {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .cat-sub {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.6rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ── ALBUMS SECTION ── */
+    .albums-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .section-title small {
+      display: block;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-mood {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      max-width: 280px;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    /* ── ALBUM GRID ── */
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .album-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .album-card:hover {
+      border-color: rgba(200,151,90,0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .album-cover {
+      width: 100%;
+      aspect-ratio: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-art {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cover-art .vinyl {
+      width: 58%;
+      height: 58%;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: conic-gradient(
+        from 0deg,
+        #1a1a1a 0deg, #2a2a2a 10deg, #1a1a1a 20deg, #2a2a2a 30deg,
+        #1a1a1a 40deg, #2a2a2a 50deg, #1a1a1a 60deg, #2a2a2a 70deg,
+        #1a1a1a 80deg, #2a2a2a 90deg, #1a1a1a 100deg, #2a2a2a 110deg,
+        #1a1a1a 120deg, #2a2a2a 130deg, #1a1a1a 140deg, #2a2a2a 150deg,
+        #1a1a1a 160deg, #2a2a2a 170deg, #1a1a1a 180deg, #2a2a2a 190deg,
+        #1a1a1a 200deg, #2a2a2a 210deg, #1a1a1a 220deg, #2a2a2a 230deg,
+        #1a1a1a 240deg, #2a2a2a 250deg, #1a1a1a 260deg, #2a2a2a 270deg,
+        #1a1a1a 280deg, #2a2a2a 290deg, #1a1a1a 300deg, #2a2a2a 310deg,
+        #1a1a1a 320deg, #2a2a2a 330deg, #1a1a1a 340deg, #2a2a2a 350deg,
+        #1a1a1a 360deg
+      );
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+      transition: transform 8s linear;
+    }
+
+    .album-card:hover .vinyl {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .cover-art .vinyl-label {
+      width: 28%;
+      height: 28%;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .album-info {
+      padding: 1.2rem 1.4rem 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .album-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .album-year {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      background: rgba(200,151,90,0.12);
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+    }
+
+    .album-genre {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    .album-title {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 0.25rem;
+    }
+
+    .album-artist {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .album-desc {
+      font-size: 0.83rem;
+      color: rgba(232,224,212,0.65);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .album-footer {
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .album-source {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .album-source span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .listen-links {
+      display: flex;
+      gap: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    .listen-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 3px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+
+    .listen-btn.spotify {
+      background: rgba(30,215,96,0.1);
+      color: #1ed760;
+      border-color: rgba(30,215,96,0.2);
+    }
+
+    .listen-btn.spotify:hover {
+      background: rgba(30,215,96,0.18);
+      border-color: rgba(30,215,96,0.4);
+    }
+
+    .listen-btn.youtube {
+      background: rgba(255,0,0,0.08);
+      color: #ff4444;
+      border-color: rgba(255,68,68,0.2);
+    }
+
+    .listen-btn.youtube:hover {
+      background: rgba(255,68,68,0.15);
+      border-color: rgba(255,68,68,0.4);
+    }
+
+    .listen-btn svg {
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+    }
+
+    /* ── TRANSITIONS ── */
+    .albums-section { animation: fadeUp 0.4s ease; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    footer span { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .section-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .section-mood { text-align: left; max-width: 100%; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .album-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="site-label">Music Curation</p>
+    <h1>The <span>Occasion</span></h1>
+    <p class="tagline">Albums matched to moments — sourced from the edges of the canon</p>
+  </header>
+
+  <nav class="categories">
+    <p class="categories-label">Choose your moment</p>
+    <div class="cat-grid" id="catGrid"></div>
+  </nav>
+
+  <main class="albums-section" id="albumsSection"></main>
+
+  <footer>
+    Picks drawn from <span>Aquarium Drunkard</span>, <span>Bandcamp Daily</span>,
+    <span>Pitchfork</span>, <span>The Wire</span> &amp; <span>Beats Per Minute</span>
+  </footer>
+
+  <script>
+    const data = {
+      categories: [
+        {
+          id: 'dinner',
+          icon: '🕯️',
+          name: 'Hosting Friends\nfor Dinner',
+          sub: 'Warm · Sophisticated',
+          mood: 'Background music that rewards attention without demanding it. Elegant enough for good conversation.',
+          albums: [
+            {
+              title: 'Con Todo El Mundo',
+              artist: 'Khruangbin',
+              year: '2018',
+              genre: 'Global Psych / Soul',
+              desc: 'A Texas trio blending Thai funk, Lebanese pop, and soul. Instrumentals float without demanding attention but reward close listening. A dinner party staple among those who knew before everyone else.',
+              source: 'Aquarium Drunkard',
+              hue1: '#3d2d1a', hue2: '#5c4020', label: '#c8975a'
+            },
+            {
+              title: 'Vontade de Rever Você',
+              artist: 'Marcos Valle',
+              year: '1981',
+              genre: 'Brazilian MPB / Soft Funk',
+              desc: 'Valle\'s forgotten early-80s record — warm synthesizers, bossa rhythms, genuinely intimate. Aquarium Drunkard has championed his catalog repeatedly. Perfect for a table with good wine.',
+              source: 'Aquarium Drunkard',
+              hue1: '#1a2d1a', hue2: '#204020', label: '#6ab04c'
+            },
+            {
+              title: 'Land of No Junction',
+              artist: 'Aoife Nessa Frances',
+              year: '2020',
+              genre: 'Folk / Dream Pop',
+              desc: 'Sparse, elegant, unhurried. Her voice sits just above the room without filling it. Pitched somewhere between Sandy Denny and Grouper, but warmer than either.',
+              source: 'Bandcamp Daily',
+              hue1: '#1a1d2d', hue2: '#202540', label: '#7b8be0'
+            },
+            {
+              title: 'Stay in Love',
+              artist: 'Minnie Riperton',
+              year: '1977',
+              genre: 'Soul / Funk / AOR',
+              desc: 'Her final studio album, overlooked next to "Lovin\' You," but lush and sophisticated — grown-up soul that suits a candle-lit table better than most things in her catalog.',
+              source: 'Music Press',
+              hue1: '#2d1a1a', hue2: '#401e1e', label: '#e07b7b'
+            },
+            {
+              title: 'Universal Beings',
+              artist: 'Makaya McCraven',
+              year: '2018',
+              genre: 'Jazz / Beat Collage',
+              desc: 'Improvised sessions with Shabaka Hutchings and Jeff Parker, cut and assembled into something cinematic. Intelligent without being austere. Pitchfork Best New Music.',
+              source: 'Pitchfork',
+              hue1: '#1a2a2d', hue2: '#1e3840', label: '#5accc8'
+            },
+            {
+              title: 'Lala Belu',
+              artist: 'Hailu Mergia',
+              year: '2020',
+              genre: 'Ethiopian Jazz / Accordion',
+              desc: 'Ethio-jazz veteran playing solo accordion over old recordings. Deeply warm, slightly strange, wholly distinctive. Bandcamp Daily has featured him multiple times.',
+              source: 'Bandcamp Daily',
+              hue1: '#2d1f0a', hue2: '#40300f', label: '#e0a030'
+            }
+          ]
+        },
+        {
+          id: 'drinking',
+          icon: '🥂',
+          name: 'Chill Drinks\nwith Friends',
+          sub: 'Groovy · Social',
+          mood: 'Music that moves without demanding you move. Keeps the energy alive, never takes over.',
+          albums: [
+            {
+              title: 'Machine Dreams',
+              artist: 'Little Dragon',
+              year: '2009',
+              genre: 'Electro-Soul / Nu-Disco',
+              desc: 'Their debut is tighter and groovier than anything they made later. Yukimi Nagano\'s voice is half the personality in the room. Works at almost any volume.',
+              source: 'Pitchfork',
+              hue1: '#1a1a2d', hue2: '#202040', label: '#9a7be0'
+            },
+            {
+              title: 'Cymande',
+              artist: 'Cymande',
+              year: '1972',
+              genre: 'Funk / Reggae / Jazz Fusion',
+              desc: 'London-based Caribbean collective who influenced everyone from The Fugees to Kendrick Lamar. Loose, hypnotic, deeply rhythmic. Somehow still underplayed in social settings.',
+              source: 'The Wire',
+              hue1: '#2d2010', hue2: '#3f2d15', label: '#c8975a'
+            },
+            {
+              title: 'Mishaps Happening',
+              artist: 'Quantic & His Octet',
+              year: '2004',
+              genre: 'Nu-Jazz / Broken Beat',
+              desc: 'British producer Will Holland leading an actual big band through breaks and bossa. Has a built-in sociability — it moves without becoming club music.',
+              source: 'Bandcamp Daily',
+              hue1: '#1a2d20', hue2: '#1e4030', label: '#5ac880'
+            },
+            {
+              title: 'Waltz of a Ghetto Fly',
+              artist: 'Amp Fiddler',
+              year: '2004',
+              genre: 'Detroit Soul / Funk',
+              desc: 'George Clinton collaborator making something between classic Motown, J Dilla, and Stevie Wonder. Chronically under-discussed. The Wire covered him and then music forgot him.',
+              source: 'The Wire',
+              hue1: '#2d1a10', hue2: '#401e10', label: '#e08040'
+            },
+            {
+              title: 'Voyager',
+              artist: 'Moonchild',
+              year: '2017',
+              genre: 'Neo-Soul / Jazz / Indie R&B',
+              desc: 'Los Angeles trio with a sound that sits perfectly between a playlist and an actual album. Vocals blend into conversation, the groove stays consistent.',
+              source: 'Beats Per Minute',
+              hue1: '#2d2030', hue2: '#3a2840', label: '#c87be0'
+            },
+            {
+              title: 'Geography',
+              artist: 'Tom Misch',
+              year: '2018',
+              genre: 'Neo-Soul / Indie Funk',
+              desc: 'South London multi-instrumentalist whose debut was a Bandcamp Daily darling. Guitar-led, warm, relaxed — gets everyone nodding without requiring their full attention.',
+              source: 'Bandcamp Daily',
+              hue1: '#0a2020', hue2: '#0f3030', label: '#40c8c8'
+            }
+          ]
+        },
+        {
+          id: 'latenight',
+          icon: '🌙',
+          name: 'Late Night\nIntimate Hours',
+          sub: '1am–4am · Small Group',
+          mood: 'Music that holds the room when conversation slows. The world outside has gone quiet.',
+          albums: [
+            {
+              title: 'Dragging a Dead Deer Up a Hill',
+              artist: 'Grouper',
+              year: '2008',
+              genre: 'Ambient Folk / Lo-Fi',
+              desc: 'Liz Harris recording vocals and guitar through layers of tape hiss. Genuinely unlike anything else. Creates a specific intimacy — it sounds like a secret. The Wire\'s album of the decade.',
+              source: 'The Wire',
+              hue1: '#1a1a2d', hue2: '#202035', label: '#7b8be0'
+            },
+            {
+              title: 'Starsailor',
+              artist: 'Tim Buckley',
+              year: '1970',
+              genre: 'Avant-Folk / Free Jazz Vocal',
+              desc: 'Buckley\'s most extreme record — his voice operating as a free instrument. Strange and absorbing in a way that fits late nights better than daylight. Niche even among Tim Buckley fans.',
+              source: 'Music Press',
+              hue1: '#1e1515', hue2: '#2d1f1f', label: '#c87070'
+            },
+            {
+              title: 'World of Echo',
+              artist: 'Arthur Russell',
+              year: '1986',
+              genre: 'Experimental / Minimalist Cello',
+              desc: 'Solo cello, voice, and echo effects. One of the great cult records of the 20th century. Barely anyone played it at the time; now it circulates in exactly these late-night rooms.',
+              source: 'Pitchfork',
+              hue1: '#202020', hue2: '#2d2d2d', label: '#e0e0c0'
+            },
+            {
+              title: 'Maria Muldaur',
+              artist: 'Maria Muldaur',
+              year: '1973',
+              genre: 'Country Soul / Folk',
+              desc: '"Midnight at the Oasis" is the one everyone knows but the whole album maintains that 2am quality of a comfortable, unhurried conversation.',
+              source: 'Aquarium Drunkard',
+              hue1: '#1a200a', hue2: '#252e10', label: '#a0c840'
+            },
+            {
+              title: 'Tender Buttons',
+              artist: 'Broadcast',
+              year: '2005',
+              genre: 'Electronic / Psych Pop',
+              desc: 'Trish Keenan and James Cargill stripped to minimal drum machines and voice. Unsettling and warm simultaneously. Better late at night than at any other time.',
+              source: 'The Wire',
+              hue1: '#1a2020', hue2: '#1e2d2d', label: '#5ac8c0'
+            },
+            {
+              title: 'Inner Song',
+              artist: 'Kelly Lee Owens',
+              year: '2020',
+              genre: 'Electronic / Ambient / Techno',
+              desc: 'Welsh artist whose second album opens with a Neil Young cover and ends in pulse techno. The middle section — ambient, yearning, sparse — is ideal for this setting.',
+              source: 'Pitchfork',
+              hue1: '#101a20', hue2: '#15252d', label: '#40a0c8'
+            }
+          ]
+        },
+        {
+          id: 'sunday',
+          icon: '☕',
+          name: 'Sunday\nSlow Start',
+          sub: 'Mellow · Hangover-friendly',
+          mood: 'No demands, no urgency. Music that sits beside you while the coffee brews and the day finds its pace.',
+          albums: [
+            {
+              title: "Wit's End",
+              artist: 'Cass McCombs',
+              year: '2011',
+              genre: 'Folk Rock / Psychedelic Country',
+              desc: 'His most hushed and patient record. Pitchfork\'s 2011 underground favorite. Long, unhurried songs that don\'t ask anything of you.',
+              source: 'Pitchfork',
+              hue1: '#1e1a10', hue2: '#2d2515', label: '#c8a060'
+            },
+            {
+              title: 'Colour Green',
+              artist: 'Sibylle Baier',
+              year: '2006',
+              genre: 'Folk / Home Recording',
+              desc: 'German actress who recorded these songs at home in the 1970s and never released them. Her son put them out decades later. Aquarium Drunkard called it one of the great discovered records.',
+              source: 'Aquarium Drunkard',
+              hue1: '#101a10', hue2: '#152015', label: '#70c870'
+            },
+            {
+              title: 'Apocalypse',
+              artist: 'Bill Callahan',
+              year: '2011',
+              genre: 'Folk / Country / Art Rock',
+              desc: 'Slow songs about landscape and mortality delivered with dry humor. Exactly the right pace for a slow coffee and a window view.',
+              source: 'Pitchfork',
+              hue1: '#1a1010', hue2: '#251515', label: '#c86060'
+            },
+            {
+              title: 'Pink Moon',
+              artist: 'Nick Drake',
+              year: '1972',
+              genre: 'Folk',
+              desc: 'Yes, it\'s not obscure — but it remains consistently underplayed in actual social settings. Recorded alone in a single night. 28 minutes. Does exactly one thing perfectly.',
+              source: 'Music Press',
+              hue1: '#101018', hue2: '#151520', label: '#8080c8'
+            },
+            {
+              title: 'Veneer',
+              artist: 'José González',
+              year: '2003',
+              genre: 'Indie Folk / Gothenburg Folk',
+              desc: 'Swedish-Argentine guitarist whose debut of fingerpicked covers and originals remains delicate and unhurried. Rediscovered by Bandcamp audiences for exactly these mornings.',
+              source: 'Bandcamp Daily',
+              hue1: '#101a18', hue2: '#152520', label: '#50c0a0'
+            },
+            {
+              title: 'Put Your Back N 2 It',
+              artist: 'Perfume Genius',
+              year: '2012',
+              genre: 'Art Pop / Lo-Fi Folk',
+              desc: 'Mike Hadreas\'s second record is his most fragile — barely-there piano and voice, confessional and gentle. Tiny Mix Tapes championed it heavily.',
+              source: 'Tiny Mix Tapes',
+              hue1: '#1a1015', hue2: '#251520', label: '#c870a0'
+            }
+          ]
+        },
+        {
+          id: 'preparty',
+          icon: '✨',
+          name: 'Pre-Party\nGetting Ready',
+          sub: '7pm–9pm · Building Energy',
+          mood: 'The warmup before the warmup. Grooves that build momentum without needing the floor yet.',
+          albums: [
+            {
+              title: 'Parcels',
+              artist: 'Parcels',
+              year: '2018',
+              genre: 'Disco / Funk / Synth-Pop',
+              desc: 'Brisbane five-piece signed to Because Music in Paris. Tightly produced disco-funk that feels like getting dressed. Daft Punk invited them to record together. Criminally underseen outside Europe.',
+              source: 'Beats Per Minute',
+              hue1: '#201a10', hue2: '#2d2515', label: '#e0c040'
+            },
+            {
+              title: "She's in Control",
+              artist: 'Chromeo',
+              year: '2004',
+              genre: 'Electrofunk / Nu-Disco',
+              desc: 'Their debut, before they got big. Lean, funny, French-Canadian electrofunk with a very particular 80s-referencing energy. Better for getting ready than their later over-produced work.',
+              source: 'Music Press',
+              hue1: '#1a0a20', hue2: '#25102d', label: '#c040e0'
+            },
+            {
+              title: 'Causers of This',
+              artist: 'Toro y Moi',
+              year: '2010',
+              genre: 'Chillwave / Lo-Fi Funk',
+              desc: 'Chaz Bear\'s debut — still the best thing in the chillwave genre. Blurry, warm funk that starts relaxed and builds. BPM covered it as a defining record of its moment.',
+              source: 'Beats Per Minute',
+              hue1: '#101a20', hue2: '#15252d', label: '#40c0e0'
+            },
+            {
+              title: 'Late Night Feelings',
+              artist: 'Mark Ronson',
+              year: '2019',
+              genre: 'Disco / Pop',
+              desc: 'Often overlooked next to his production credits. The full album — with Camila Cabello, Alicia Keys, Lykke Li — builds energy consistently without tipping into anything too intense.',
+              source: 'Music Press',
+              hue1: '#20100a', hue2: '#2d150f', label: '#e06040'
+            },
+            {
+              title: 'Jungle',
+              artist: 'Jungle',
+              year: '2014',
+              genre: 'Soul / Funk / Neo-Disco',
+              desc: 'London collective\'s debut. Dense, euphoric, anonymous — nobody knows who\'s in the band. Made for movement but in the "dancing in your kitchen" sense, not the club sense.',
+              source: 'Pitchfork',
+              hue1: '#1a1a10', hue2: '#252515', label: '#c0c040'
+            },
+            {
+              title: 'Seeking Thrills',
+              artist: 'Georgia',
+              year: '2020',
+              genre: 'Synth-Pop / Dance',
+              desc: 'Georgia Barnes making post-punk-inflected club pop that sounds like getting ready in the best possible timeline. Beats Per Minute listed it among the decade\'s best dance albums.',
+              source: 'Beats Per Minute',
+              hue1: '#10101a', hue2: '#151525', label: '#6060e0'
+            }
+          ]
+        },
+        {
+          id: 'solo',
+          icon: '🎧',
+          name: 'Solo Creative\nor Introspective',
+          sub: 'Deep Focus · Headphone Hours',
+          mood: 'Music that builds an interior space. Works as background or full immersion — your choice.',
+          albums: [
+            {
+              title: 'The Disintegration Loops',
+              artist: 'William Basinski',
+              year: '2002',
+              genre: 'Ambient / Tape Decay',
+              desc: 'Basinski recorded old tape loops disintegrating in real time on September 11, 2001. Profound, slow, irreducibly melancholic. The Wire\'s canonical ambient document of the decade.',
+              source: 'The Wire',
+              hue1: '#151010', hue2: '#201515', label: '#c07070'
+            },
+            {
+              title: 'Spaces',
+              artist: 'Nils Frahm',
+              year: '2013',
+              genre: 'Neoclassical / Ambient Piano',
+              desc: 'Live recordings from different venues, edited into a continuous set. More textured and human than his studio work. Works as background or full immersion depending on what you need.',
+              source: 'Pitchfork',
+              hue1: '#101015', hue2: '#15151f', label: '#8080d0'
+            },
+            {
+              title: 'Nepenthe',
+              artist: 'Julianna Barwick',
+              year: '2013',
+              genre: 'Ambient / Choral Loop',
+              desc: 'Recorded in Iceland with a Sigur Rós collaborator. Voice layered into architecture. Pitchfork Best New Music. Creates a very specific interior space that opens around you.',
+              source: 'Pitchfork',
+              hue1: '#101520', hue2: '#15202d', label: '#50a0e0'
+            },
+            {
+              title: 'Tomorrow Was the Golden Age',
+              artist: 'Bing & Ruth',
+              year: '2014',
+              genre: 'Minimalist / Contemporary Classical',
+              desc: 'David Moore leading a ten-piece ensemble through slow, patient minimalism. Bandcamp Daily has returned to it several times. Suits long writing sessions or quiet evenings.',
+              source: 'Bandcamp Daily',
+              hue1: '#101510', hue2: '#15201a', label: '#60c070'
+            },
+            {
+              title: 'Have You in My Wilderness',
+              artist: 'Julia Holter',
+              year: '2015',
+              genre: 'Art Pop / Chamber Pop',
+              desc: 'Her most accessible record but still genuinely unusual — orchestral pop that moves through moods without announcing them. Aquarium Drunkard\'s album of the year, 2015.',
+              source: 'Aquarium Drunkard',
+              hue1: '#1a1015', hue2: '#251520', label: '#d070c0'
+            },
+            {
+              title: 'Everywhere at the End of Time — Stage 1',
+              artist: 'The Caretaker',
+              year: '2016',
+              genre: 'Hauntological Ambient',
+              desc: 'James Leyland Kirby\'s ballroom recordings, deliberately degraded to simulate memory loss. Begins beautifully; the full six-stage project goes somewhere much darker. Stage 1 alone is perfect.',
+              source: 'The Wire',
+              hue1: '#151010', hue2: '#1f1414', label: '#c09060'
+            }
+          ]
+        }
+      ]
+    };
+
+    function spotifyUrl(artist, title) {
+      const q = encodeURIComponent(`${artist} ${title}`);
+      return `https://open.spotify.com/search/${q}`;
+    }
+
+    function youtubeUrl(artist, title) {
+      const q = encodeURIComponent(`${artist} ${title} full album`);
+      return `https://www.youtube.com/results?search_query=${q}`;
+    }
+
+    let active = 'dinner';
+
+    function renderCategories() {
+      const grid = document.getElementById('catGrid');
+      grid.innerHTML = data.categories.map(c => `
+        <button class="cat-btn ${c.id === active ? 'active' : ''}" data-id="${c.id}">
+          <span class="cat-icon">${c.icon}</span>
+          <span class="cat-name">${c.name.replace('\n', '<br>')}</span>
+          <span class="cat-sub">${c.sub}</span>
+        </button>
+      `).join('');
+      grid.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          active = btn.dataset.id;
+          renderCategories();
+          renderAlbums();
+        });
+      });
+    }
+
+    function renderAlbums() {
+      const cat = data.categories.find(c => c.id === active);
+      const section = document.getElementById('albumsSection');
+      section.style.animation = 'none';
+      section.offsetHeight;
+      section.style.animation = '';
+
+      section.innerHTML = `
+        <div class="section-header">
+          <div class="section-title">
+            <small>${cat.icon} ${cat.sub}</small>
+            ${cat.name.replace('\n', ' ')}
+          </div>
+          <p class="section-mood">${cat.mood}</p>
+        </div>
+        <div class="album-grid">
+          ${cat.albums.map(a => `
+            <article class="album-card">
+              <div class="album-cover">
+                <div class="cover-art" style="background: linear-gradient(135deg, ${a.hue1} 0%, ${a.hue2} 100%);">
+                  <div class="vinyl">
+                    <div class="vinyl-label" style="background: ${a.label}; box-shadow: 0 0 20px ${a.label}40;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="album-info">
+                <div class="album-meta">
+                  <span class="album-year">${a.year}</span>
+                  <span class="album-genre">${a.genre}</span>
+                </div>
+                <h2 class="album-title">${a.title}</h2>
+                <p class="album-artist">${a.artist}</p>
+                <p class="album-desc">${a.desc}</p>
+                <div class="album-footer">
+                  <p class="album-source">Via <span>${a.source}</span></p>
+                  <div class="listen-links">
+                    <a class="listen-btn spotify" href="${spotifyUrl(a.artist, a.title)}" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                      Spotify
+                    </a>
+                    <a class="listen-btn youtube" href="${youtubeUrl(a.artist, a.title)}" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                      YouTube
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    renderCategories();
+    renderAlbums();
+  </script>
+</body>
+</html>
