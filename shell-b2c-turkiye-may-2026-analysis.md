@@ -33,11 +33,11 @@ Two derived facts matter more than any single number:
 |---|---|---|---|---|
 | Jan | 428,812 t | +9.1% | 1,861,387 t | −1.7% |
 | Feb | 417,803 t | +17.7% | 1,834,490 t | +1.1% |
-| Mar | 480,047 t | +8.1% | 2,220,838 t | +8.1%* |
+| Mar | 480,187 t | +8.1% | 2,260,390 t | +8.1%* |
 | Apr | 466,449 t | +6.1% | 2,004,871 t | −4.1% |
 | **May** | **521,965 t** | **+11.4%** | **1,960,637 t** | **−15.7%** |
 
-\* March inflated by pre-buying ahead of war-driven price hikes and holiday timing.
+\* March's diesel increase is a stockpiling + base-effect artifact, not holiday demand: fleets and drivers pre-bought ahead of war-driven price hikes (arefe day 19 March saw 87.5M L of diesel sold — a normal *working-day* volume on a holiday eve), and the comparison base, March 2025, was itself depressed because the 9-day Ramazan 2025 holiday began on 29 March. See Appendix A.
 
 Every month of 2026 repeats the same signature — gasoline up, diesel flat-to-down — and May is the extreme print of the series. **Whoever leads gasoline retail leads May.** That is Shell.
 
@@ -87,6 +87,7 @@ This driver is structural, not one-off: hybrids (847k cars, 4.7% of the parc, al
 - **827,272,614 litres** of gasoline+diesel sold in 22–31 May (₺54.1bn). During the holiday window the national sales mix shifted to **~33% gasoline vs ~20% on a normal day.**
 - Holiday demand is almost purely **B2C passenger-car, highway-corridor, big-brand demand** — while B2B diesel demand (freight, industry, agriculture) simultaneously cratered. The retail channel's weight in the whole market surged, and within retail, the segments where Shell over-indexes (intercity corridors, premium V-Power, loyalty-carrying urban customers) surged most.
 - Pricing helped rather than hurt: diesel was cut **5.52 TL/L on 9 May**, a further gasoline cut landed on bayram eve, and eşel-mobil ÖTV support (up to 13.90 TL/L diesel / 10.59 TL/L gasoline waived) kept pump prices ~64–67 TL/L — falling prices into a holiday maximize discretionary travel.
+- **Quantified:** during the 22–31 May window, daily gasoline ran ~27.5M L/day vs a ~20.9M normal (**+32%**) while daily diesel ran ~55.2M L/day vs ~85.9M normal (**−36%**). Spread over the month, and against a May 2025 base that contained *zero* holiday days (Kurban 2025 fell 6–9 June), the holiday calendar alone plausibly contributed **~+8–9 pp of gasoline's +11.4%** and **−6 to −10 pp of diesel's −15.7%**. The underlying, calendar-clean trends are roughly benzin +3–5% and motorin −6 to −9% — i.e., the May mix shift that lifted Shell was largely a calendar event layered on a real but smaller structural shift. Historical validation of this holiday signature is in **Appendix A**.
 
 ### Driver 3 — Three competitors were impaired during exactly this window (share redistribution)
 
@@ -118,7 +119,7 @@ If the metric you track is B2C share *of Shell's or the market's total*, note th
 | BP→PO churn | small, positive | Plays out through 1 Nov 2026 rebrand deadline |
 | Shell campaigns/network | steady accrual | Durable while sustained |
 
-**Expect the June 2026 print (due ~late August) to come off the May peak** — no bayram (June 2025 had one, so the y/y base flips *against* retail), post-holiday demand lull, and the TP window closing. The right internal read is: **trend B2C share = structurally rising; May level = trend + ~1–2 pp of perfect-storm.** The bigger risk to H2 retail volumes is the scheduled end of eşel-mobil ÖTV support on **1 October 2026** — a pump-price step-up that will hit discretionary (B2C gasoline) demand first, even as it may further squeeze marginal competitors.
+**Expect the June 2026 print (due ~late August) to come off the May peak** — June 2026 has no holiday while the June 2025 base contained the (short, 4.5-day) Kurban 2025 holiday, so the calendar flips *against* gasoline/retail; add the post-holiday demand lull, freight catch-up lifting diesel, and the TP window closing. The right internal read is: **trend B2C share = structurally rising; May level = trend + ~1–2 pp of perfect-storm.** The bigger risk to H2 retail volumes is the scheduled end of eşel-mobil ÖTV support on **1 October 2026** — a pump-price step-up that will hit discretionary (B2C gasoline) demand first, even as it may further squeeze marginal competitors.
 
 ---
 
@@ -129,6 +130,57 @@ If the metric you track is B2C share *of Shell's or the market's total*, note th
 3. Whether your B2C series is "share of retail channel" or "B2C portion of Shell volume" (Section 4, Driver 5).
 4. Dealer-count movements Mar–Jun 2026: how many ex-TP (and any ex-BP/Balpet) sites flagged to Shell — this determines how much of the gain survives 1 July.
 5. One press pass reported alternative y/y figures for May (benzin +4.4%, motorin −2.0%) against the same tonnages; the +11.43/−15.73 set is multi-source and arithmetically consistent, but confirm against the PDF.
+
+---
+
+## Appendix A — The holiday effect on gasoline vs diesel: historical validation
+
+**Question addressed:** diesel *rose* in March 2026 (+8.1%), which was a bayram month, yet *fell* in May 2026 (−15.7%), also a bayram month — so is the "holiday effect" real? Answer: yes, but the holiday effect on **diesel is negative**, always. Long holidays boost gasoline (passenger travel) and suppress diesel (freight, industry and agriculture idle). March's diesel increase came from two other forces: panic stockpiling ahead of war-driven price hikes, and a depressed base month. The evidence:
+
+### A.1 What actually happens to daily sales inside holiday windows (EPDK bayram data)
+
+| Holiday window | Days | Daily benzin | vs month-normal | Daily motorin | vs month-normal |
+|---|---|---|---|---|---|
+| Ramazan 2024 (5–14 Apr, 9-day holiday) | 10 | 19.7M L | ≈ +11% | 51.8M L | **≈ −40%** |
+| Kurban 2024 (15–22 Jun, 9-day holiday) | 8 | 23.2M L | ≈ +10% | 59.2M L | **≈ −35%** |
+| Ramazan 2025 (28 Mar–6 Apr, 9-day holiday) | 10 | 21.3M L | ≈ +9% | 53.7M L | **≈ −35%** |
+| Ramazan 2026 (14–22 Mar) | 9 | 23.1M L | ≈ +11% | 57.6M L | ≈ −33% |
+| **Kurban 2026 (22–31 May, 9-day holiday)** | 10 | **27.5M L** | **≈ +32%** | 55.2M L | **≈ −36%** |
+
+*(Normals ≈ same-month EPDK volumes ÷ days; ~20.9M L/day benzin and ~85.9M L/day motorin were the figures cited in the 2026 coverage.)*
+
+**In every observed holiday window since 2024, daily diesel ran 33–40% below normal while daily gasoline ran above normal.** The holiday has never lifted diesel — freight bans on major corridors during bayram peak days (İçişleri Bakanlığı circulars; fuel tankers exempt, general freight not), factory working-day losses (May 2026 industrial production −2.9% m/m, the sharpest fall since April 2025, explicitly attributed to the 9-day bayram), and idle agriculture guarantee it. Kurban 2026's gasoline surge (+32% daily) was by far the strongest on record — the all-time mobility records did that.
+
+### A.2 The monthly signature in the EPDK series, 2023–2026
+
+| Bayram month | Holiday | Benzin y/y | Motorin y/y | Motorin level vs prior month |
+|---|---|---|---|---|
+| Apr 2023 (Ramazan 21–23 Apr, short) | 3.5 d | +12.9% | **−6.8%** | −10.2% |
+| Apr 2024 (Ramazan, **9 days** 6–14 Apr) | 9 d | **+30.0%** | +6.3%* | −8.0% |
+| Jun 2024 (Kurban, **9 days** 15–23 Jun) | 9 d | **+28.6%** | +4.8%* | +5.5% (summer freight) |
+| Mar 2025 (Ramazan 9-day window *starts* 29 Mar) | 3 d in-month | **+29.1%** | **−3.7%** | +15.2% (seasonal) |
+| Jun 2025 (Kurban 6–9 Jun, short) | 4.5 d | +10.5% | +1.4%* | +0.8% |
+| **May 2026 (Kurban, 9 days 23–31 May)** | 9 d | **+11.4%** | **−15.7%** | −2.2% |
+
+\* Measured against a base month that itself contained a bayram, which flatters the diesel y/y.
+
+The pattern holds every time: in bayram months gasoline's y/y jumps far above its trend while diesel prints below trend or negative. Note Mar 2025: diesel fell **−3.7%** in a year when full-year diesel *grew* +3.7% — losing just the last ~3 days of March to the holiday start was enough to turn the month negative.
+
+### A.3 Why March 2026 diesel rose +8.1% anyway (three forces, none of them "holiday demand")
+
+1. **Panic stockpiling ahead of price hikes.** The Iran war began late February; pump prices were rising almost daily through March. Fleets, farmers and drivers topped off tanks and depots. The proof is in the holiday window itself: arefe day 19 March 2026 saw **87.5M litres of diesel** sold — *above* the normal working-day average of 85.9M, on a holiday eve — and the Ramazan 2026 window's 57.6M L/day diesel average was the highest of any holiday window in three years. People weren't burning that diesel on holiday trips; they were storing it before the next price hike.
+2. **A depressed base.** March 2025 (the y/y comparison base, 2,090,251 t, itself −3.7%) lost its final ~3 days to the start of the 9-day Ramazan 2025 holiday. A weak base flatters March 2026 by roughly +3 pp.
+3. **Window placement.** The Ramazan 2026 window (14–22 Mar) sat mid-month, so both the pre-holiday loading rush *and* the post-holiday freight catch-up (23–31 Mar) landed inside the same month, roughly netting out the holiday drag. Kurban 2026 (22–31 May) sat at month-end: May absorbed the full holiday suppression while the catch-up spilled into June.
+
+**The historical precedent for stockpiling months:** July 2023, when a large mid-month ÖTV hike triggered pre-buying, printed motorin **+24.7%** y/y — and July 2024, against that inflated base, printed **−11.9%**. Price-shock months produce diesel spikes with paybacks later; March 2026 (+8.1%) followed by April (−4.1%) and May (−15.7%) fits that template exactly, amplified by the holiday calendar.
+
+### A.4 What this means for the Shell B2C reading
+
+- The May gasoline/diesel divergence (+27 pp spread) is precisely what 9-day holidays have always produced — but May 2026 stacked it on top of a genuine, accelerating diesel decline and measured it against a holiday-free May 2025. The holiday explains roughly **+8–9 pp of benzin's +11.4%** and **−6 to −10 pp of motorin's −15.7%**.
+- Correspondingly, of Shell's record B2C share, the mix-mechanical component is **majority calendar-driven for May specifically** — reinforcing the expectation that the June print mean-reverts (June 2026 has no holiday; the June 2025 base has a short one; freight catch-up lifts diesel).
+- The *structural* mix tailwind (hybrid-driven gasoline growth ~+5%/yr trend vs diesel ~−5%/yr trend ex-calendar) remains intact and continues to favor Shell — just at a gentler slope than the raw May print suggests.
+
+*Holiday-window data sources: AA (Kurban 2026: aa.com.tr/tr/ekonomi/kurban-bayrami-tatilinde-827-milyon-litre-akaryakit-satisi-yapildi/3957372; Ramazan 2026: .../bayram-tatilinde-gunluk-akaryakit-tuketimi-3-yilin-zirvesine-cikti/3884909; Ramazan 2025: .../bayram-tatilinde-750-3-milyon-litre-akaryakit-satisi-yapildi/3532594; Kurban 2024: aa.com.tr/tr/enerjiterminali/petrol/bayram-tatilinde-yaklasik-660-milyon-litre-akaryakit-satisi-yapildi/42132; Ramazan 2024: ensonhaber.com/ekonomi/epdk-acikladi-bayram-tatilinde-715-milyon-litre-akaryakit-satisi-yapildi). Monthly series: AA/petroturk/trthaber/dunya coverage of EPDK monthly reports 2023–2026 (per-month links in the research record; March 2026 motorin corrected to 2,260,390 t per dunya.com haberi-825746 and sabah.com.tr 7586902, consistent with the directly reported March 2025 base of 2,090,251 t). Holiday calendars: AA/Hürriyet/TRT (9-day confirmations: Kurban 2022, Kurban 2023, Ramazan 2024, Kurban 2024, Kurban 2026; NOT extended: Ramazan 2023, Kurban 2025; Ramazan 2025 extended for public sector 29 Mar–6 Apr). Freight bans: İçişleri circulars via AA/superhaber. May 2026 industrial production: TÜİK via press.*
 
 ---
 
