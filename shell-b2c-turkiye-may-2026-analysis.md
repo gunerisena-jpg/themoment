@@ -76,6 +76,16 @@ So Shell's pre-May retail-share ceiling was roughly **20–21.5%**. Nothing in t
 
 Shell's B2C share is a weighted average of its ~30% gasoline share and its (much lower) ~17–20% retail-diesel share. When gasoline's weight in the retail barrel jumps, Shell's blended share rises **with Shell doing nothing at all.**
 
+**Why this lifts Shell and not "any company": share is zero-sum, and mix rewards portfolio asymmetry.** A distributor's blended share = its diesel share + w × (gasoline share − diesel share), where w is gasoline's weight in the barrel. The gasoline-minus-diesel share gap by major (March 2026 product shares):
+
+| Distributor | Benzin share | Motorin share | Gap | Effect of w rising 16.8% → 21.0% |
+|---|---|---|---|---|
+| **Shell** | **29.8%** | 16.4% | **+13.4 pp** | **≈ +0.57 pp** blended share |
+| Opet | 27.3% | 18.1% | +9.2 pp | ≈ +0.39 pp |
+| Petrol Ofisi | 24.1% | 26.8% | **−2.7 pp** | ≈ **−0.11 pp** |
+
+Same market, same volumes — Shell gains the most, Opet gains less, and the market leader *loses* share, purely because Shell's portfolio is by far the most gasoline-asymmetric of any major. During the bayram window itself w hit 33%, implying a Shell blended share of ~20.8% for those ten days vs ~18.6% at last year's mix. And the collapsing segment (B2B/commercial diesel) is where Petrol Ofisi leads, while the booming segment (holiday retail gasoline) is where Shell leads — the mix shock was, in effect, a transfer from PO's book to Shell's.
+
 Illustrative bridge (assumptions stated, verify against the PDF): applying EPDK channel weights (benzin ~99.5% via stations, motorin ~73%), gasoline's weight in the *retail* barrel rose from ~21.6% (May 2025) to ~26.7% (May 2026). Holding Shell's product-level shares constant at ~30% (benzin) and ~19% (retail motorin), the blended retail share moves from ~21.4% to ~21.9% — **≈ +0.5–0.6 pp of B2C share from mix alone**, before any actual share capture. The same arithmetic on total white products gives ~+0.5 pp (19.0% → ~19.5%). Any print meaningfully above that (e.g. 22%+) implies Shell *also* gained within products — see Drivers 2–5.
 
 This driver is structural, not one-off: hybrids (847k cars, 4.7% of the parc, all burning gasoline) plus a gasoline car parc that grew from 3.2M (2020) to 5.55M (Jun 2026) guarantee gasoline keeps outgrowing diesel. Diesel is 6–8% of new-car sales; hybrid+EV passed 51%. **The mix tailwind blows in Shell's favor every month from here — May just blew hardest.**
@@ -89,7 +99,9 @@ This driver is structural, not one-off: hybrids (847k cars, 4.7% of the parc, al
 - Pricing helped rather than hurt: diesel was cut **5.52 TL/L on 9 May**, a further gasoline cut landed on bayram eve, and eşel-mobil ÖTV support (up to 13.90 TL/L diesel / 10.59 TL/L gasoline waived) kept pump prices ~64–67 TL/L — falling prices into a holiday maximize discretionary travel.
 - **Quantified:** during the 22–31 May window, daily gasoline ran ~27.5M L/day vs a ~20.9M normal (**+32%**) while daily diesel ran ~55.2M L/day vs ~85.9M normal (**−36%**). Spread over the month, and against a May 2025 base that contained *zero* holiday days (Kurban 2025 fell 6–9 June), the holiday calendar alone plausibly contributed **~+8–9 pp of gasoline's +11.4%** and **−6 to −10 pp of diesel's −15.7%**. The underlying, calendar-clean trends are roughly benzin +3–5% and motorin −6 to −9% — i.e., the May mix shift that lifted Shell was largely a calendar event layered on a real but smaller structural shift. Historical validation of this holiday signature is in **Appendix A**.
 
-### Driver 3 — Three competitors were impaired during exactly this window (share redistribution)
+### Driver 3 — Competitor disruption (a *level* driver, not the May spike)
+
+**Timing caveat, stated plainly:** the TP and BP events were already fully reflected in April's numbers — TP's dealer free-agency opened in November 2025, BP's dealers moved under PO's license from 1 March, Balpet was delicensed in February 2025. They therefore explain why Shell's 2026 share *level* sits above its 2024–25 range (i.e., why an all-time high was within reach at all), and they depress the May 2025 *base* in y/y comparisons (TP alone still held ~4.9% of the market in May 2025). But they cannot explain the May-over-April jump — that increment is Drivers 1–2. The only genuinely May-relevant pieces here are the tail of TP dealer migration (the EPDK transfer window ran to 30 June, so switching continued through April–May) and ongoing BP→PO rebranding churn.
 
 - **TP Petrol Dağıtım (Türkiye Petrolleri, ~4.9% share / ~592 dealers a year earlier):** criminal investigation over an 18,476-tonne fuel shortfall (>₺1bn), executives jailed. EPDK board decisions 13916 (3 Nov 2025) and 14415 (26 Mar 2026) allowed TP dealers to **temporarily sell under other distributors' licenses until 30 June 2026** — no exit fees. Through the entire May data month, a ~5%-share network was in free agency and its volumes were being booked under rival flags. Which majors captured how much is not public; given Shell's recruitment record, some accrual to Shell is likely, and even PO/Opet-bound volume mechanically lifts every remaining player's share as TP's own line collapses.
 - **Balpet:** distributor license canceled 13 Feb 2025 (smuggling-law court ruling) — another mid-tier network's volume permanently redistributed into 2025–26 comparisons.
@@ -130,6 +142,13 @@ If the metric you track is B2C share *of Shell's or the market's total*, note th
 3. Whether your B2C series is "share of retail channel" or "B2C portion of Shell volume" (Section 4, Driver 5).
 4. Dealer-count movements Mar–Jun 2026: how many ex-TP (and any ex-BP/Balpet) sites flagged to Shell — this determines how much of the gain survives 1 July.
 5. One press pass reported alternative y/y figures for May (benzin +4.4%, motorin −2.0%) against the same tonnages; the +11.43/−15.73 set is multi-source and arithmetically consistent, but confirm against the PDF.
+
+**Four falsifiable checks against the May table you hold** (each discriminates between the mix mechanism and genuine within-product capture):
+
+1. **Opet up, PO down?** If the mix mechanism dominates, Opet's share should also have risen (about two-thirds of Shell's gain, per the gap ratio 9.2/13.4) and Petrol Ofisi's should have fallen. If instead only Shell rose, something Shell-specific did the work.
+2. **Shell's May benzin share vs March's 29.8%.** Above ~30% → Shell captured share *within* gasoline (holiday-corridor/brand/campaign effect is real). Flat ~29–30% → the record is mix + channel arithmetic.
+3. **Shell's gain vs Opet's gain, ratio-adjusted.** If Shell gained meaningfully more than 1.45× Opet's gain, the excess is within-product capture, not portfolio shape.
+4. **The B2B (serbest kullanıcı) table.** If the diesel collapse concentrated in PO/Opet's commercial books while station-channel diesel held up better, the B2C-vs-B2B channel effect is confirmed independently of gasoline.
 
 ---
 
