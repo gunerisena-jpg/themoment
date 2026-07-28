@@ -203,6 +203,43 @@ The pattern holds every time: in bayram months gasoline's y/y jumps far above it
 
 ---
 
+## Appendix B — The city-level relation
+
+The EPDK bayram releases break the holiday window down by province, and the pattern lines up with the Shell story geographically, not just by product.
+
+### B.1 Gasoline is metro fuel; diesel is Anatolia fuel
+
+Kurban 2026 window (22–31 May), gasoline share of each geography's white-product sales:
+
+| Geography | Benzin | Motorin | Benzin share of window sales |
+|---|---|---|---|
+| İstanbul | 46.27M L | 66.44M L | **41.1%** |
+| Ankara | 21.81M L | 33.19M L | **39.7%** |
+| İzmir | 15.39M L | 25.94M L | **37.2%** |
+| Rest of Türkiye | 191.4M L | 426.7M L | 31.0% |
+| **National window** | 274.9M L | 552.3M L | 33.2% |
+| National normal day | 20.9M L/d | 85.9M L/d | ~19.6% |
+
+The three metros took **30.4% of national holiday gasoline but only 22.7% of holiday diesel**. Diesel demand is dispersed across freight corridors and agricultural provinces; gasoline demand concentrates where the car parc is newest and most hybrid-heavy — the metros (İstanbul alone accounts for ~38% of national EV-charging consumption; Ankara 17%, İzmir 12% — a proxy for where the fleet transition lives).
+
+### B.2 The metro gasoline surge is where the growth was
+
+İstanbul, Kurban 2024 vs Kurban 2026 windows, per-day: benzin 3.72M → 4.63M L/day (**+24%**); motorin 6.74M → 6.64M L/day (**−1.5%**). İstanbul's window gasoline share rose from 35.5% to 41.1% in two years. The entire two-year growth in İstanbul holiday fuel demand was gasoline.
+
+### B.3 Why this maps onto Shell
+
+- Shell's ~1,250-station network at 2.1–2.5× sector-average throughput is by construction a **metro and main-artery footprint** — high-volume sites in and around exactly the geographies in the top rows of the table. PO's ~2,700 stations (and the Anatolian brands — TP/Alpet, Kadoil, Termopet, Aytemiz) blanket the provinces in the bottom rows, where the diesel economy lives.
+- May's demand didn't just shift product (diesel→gasoline); it shifted **place** (freight corridors and rural provinces → metros and holiday routes). Both shifts point at the same beneficiary. Peak fill-up days were 22–23 May — departure-day tank-filling *in home metros* before travel, i.e., in Shell's core geography; İstanbul topped both fuels.
+- The diesel collapse concentrated in freight geographies — including the eastern/southeastern Iran-corridor provinces (truck runs to Iran: exports −17%, imports −48%) — where Shell's B2C footprint is thinnest and the loss was other distributors' volume.
+
+### B.4 How to verify internally
+
+EPDK's monthly PDF carries il bazında product sales but no distributor share by province — that cross-section only exists in Shell's own data. Prediction to test: Shell's May B2C share gain should be **largest in İstanbul/Ankara/İzmir and the bayram corridors** (Kocaeli–Sakarya–Bolu–Ankara axis, Eskişehir–Afyon hub, Antalya/Muğla/Aydın/Balıkesir coasts) **and smallest in the east/southeast freight provinces**. If instead the gain is geographically uniform, the mix story is incomplete and something network-wide (pricing, campaigns) did more work than this analysis credits.
+
+*Sources: province splits from the EPDK Kurban 2026 and Kurban 2024 bayram releases (AA 3957372, 42132); charging concentration: EPDK charging-market data via yesilhaber/tuncmatik 2025–26 coverage; Iran corridor: UND via Dünya haberi-831358.*
+
+---
+
 ## 7. Sources (key)
 
 **Official/primary:** EPDK monthly petroleum reports: https://www.epdk.gov.tr/Detay/Icerik/3-0-104/petrolaylik-sektor-raporu · STAŞ FY2025 activity report (KAP): https://storage.fintables.com/media/uploads/kap-attachments/STAS%20YK%20Faaliyet%20Raporu%2031.12.2025.pdf · Rekabet Kurumu fuel sector review (channel structure): https://www.rekabet.gov.tr/Dosya/akaryakit-sektor-incelemesi-raporu-20240318105053196.pdf
