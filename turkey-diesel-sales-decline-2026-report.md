@@ -18,6 +18,8 @@ The decline is best understood as **three stacked layers**:
 
 **Key forward risk:** the eşel-mobil ÖTV support that cushioned pump prices during the war steps down to 25% in August–September and **ends entirely on 1 October 2026**, implying a further pump-price step-up and renewed demand pressure in Q4 2026.
 
+**Brand-level finding (Section 7):** Shell is underperforming the market, and the underperformance is concentrated in diesel. Shell slipped from a comfortable #2 (19.7% in 2023) to trading places with Opet around #2/#3, while Petrol Ofisi pulled ~6 points ahead by absorbing BP's ~770 stations. Shell's diesel share (~17–19%) runs well below its all-products share because its book is skewed to premium retail/passenger diesel — the collapsing segment — while PO dominates the resilient contracted fleet/wholesale channel and Opet enjoys a Tüpraş/Koç supply advantage in a year when supply shifted decisively from imports to domestic refining.
+
 ---
 
 ## 2. What the Official Data Shows
@@ -172,7 +174,63 @@ You asked what to analyze beyond the fleet's fuel/vehicle distribution. Based on
 
 ---
 
-## 7. Data Caveats
+## 7. Competitive Analysis — Why Shell Is Underperforming the Market
+
+The market contraction (Sections 2–4) explains the industry trend, but not brand divergence. EPDK distributor-level data shows Shell is losing *relative* position, and the loss is concentrated in diesel.
+
+### 7.1 Market shares by distributor (EPDK, total white products)
+
+| Distributor | 2023 (FY) | 2024 (FY) | Mar/Apr 2026 (monthly) | May 2026 (monthly) |
+|---|---|---|---|---|
+| Petrol Ofisi (Vitol) | 21.90% — #1 | 21.43% (excl. BP) | **26.34%** (incl. ex-BP) | **26.36%** |
+| **Shell (Shell & Turcas)** | **19.71% — #2** | **~19.4% (−0.3 pt; lost #2 rank)** | **19.49% — #3** | **20.43% — #2 (by 0.02 pt)** |
+| Opet (Koç/Tüpraş) | 18.93% — #3 | ~20.4% (+0.7 pt, biggest gainer) | 19.69% — #2 | 20.41% — #3 |
+
+Shell held a comfortable #2 in 2023; by 2024 Opet overtook it, and in 2026 the two oscillate within 0.1 pt of each other while Petrol Ofisi has pulled ~6 points ahead. In Q1 2025 the sector's retail volume grew +8% y/y while Opet grew +12% — the only top-3 brand gaining share that quarter.
+
+### 7.2 The diesel-specific gap — Shell's core weakness
+
+EPDK monthly product-level data (spring 2026): Petrol Ofisi sold ~606k t of motorin vs Opet ~410k t and **Shell ~370k t** — implying diesel shares of roughly **PO 27–31%, Opet 18–21%, Shell 17–19%**. Two structural facts:
+
+- **Shell's diesel share runs 1.5–3 points *below* its all-products share; PO's runs *above* its own.** Shell is #1 in *gasoline* nationally; PO is #1 in *diesel*, with the entrenched commercial/wholesale franchise (193 wholesale dealers, ~1.0M m³ storage across 11 terminals, AutoMatic/Filo fleet cards, Border Pass tax-free diesel for international hauliers).
+- In 2024 Shell's diesel volume fell ~1% while Opet grew diesel ~7% (Deniz Yatırım sector summary — verify against the report PDF).
+
+So when the *diesel* market contracts 4–16% per month (2026), the brand most exposed to spot/retail passenger diesel — rather than contracted fleet volume — loses fastest. Diesel is ~4x the gasoline market by tonnage, so diesel weakness dominates total volumes even though Shell's gasoline franchise is growing.
+
+### 7.3 The explanations, ranked by evidence
+
+**1. Rivals bulked up while Shell stayed the same size — the arithmetic driver (strong).**
+Petrol Ofisi's acquisition of BP Türkiye (~770 stations; approved Sep 2024, legally merged 28 Feb 2025, rebranding to finish by 1 Nov 2026) took PO's network to ~2,700 sites and its share from 21.4% to ~26.4% — and PO has so far *retained* essentially all of BP's book inside one loyalty/fleet ecosystem. Opet is expanding aggressively (1,882 → 1,966 stations incl. Sunpet; publicly targeting market leadership within three years; fastest-growing brand of Q1 2025). Shell & Turcas' network actually *grew* (1,146 → 1,202 → ~1,250 sites, 2023–2025) — this is not station attrition — but ~1,250 sites now compete against a 2,700-station PO and a ~1,950-station Opet, plus a merged Alpet+TP (~1,073 sites, #4). Shell's own headline metric — throughput per station 2.14x the sector average — is the mirror image of a scale disadvantage.
+
+**2. Channel and product mix: overweight premium retail gasoline, underweight fleet diesel (strong).**
+Shell & Turcas' own disclosures confirm it: its *station-channel* share (~20.8–21.8% "under-canopy") is **higher** than its all-channel share (~19.5–20.4%), meaning Shell is structurally light in the wholesale/commercial channel where the diesel volume war is fought. The collapsing segment — passenger diesel — is where Shell's retail-skewed diesel book sits; the resilient segment — contracted freight fleets — is where PO dominates via fleet cards and wholesale relationships. Notably, Shell's *total* May 2026 share held up (20.43%) precisely because gasoline (+11% y/y) is booming and Shell leads it — the gasoline boom masks the diesel loss in the totals.
+
+**3. Supply economics reshuffled against import-dependent players (strong structurally; Shell-specific exposure partly inferred).**
+~85% of Turkey's 13.6 Mt diesel imports in 2025 were Russian-origin barrels bought at a discount. Shell plc exited Russian hydrocarbons in 2022, so Shell Türkiye plausibly never rode that discount — while trader-backed rivals could (inference; company-level import origins are not public). Then sanctions (Rosneft/Lukoil Nov 2025, EU import ban Jan 2026, Russia's own diesel-export ban extended into 2026–27) killed the imported-barrel game for everyone and shifted supply to Tüpraş — whose domestic diesel sales rose +20% y/y in Q1 2026 at 95% utilization. The natural winners of that shift: **Opet (Tüpraş owns ~41.7% of it, same Koç group, plus Ditaş tanker fleet)** and **PO (Vitol trading muscle, largest terminal network ~1.0M m³ vs Shell's ~255k m³ at Marmara Ereğlisi)**. During the supply squeeze, terminal-owning importers prioritized their own dealer networks.
+
+**4. Parent-strategy divergence: Shell harvests value while rivals' owners buy share (partial).**
+Shell plc's global "value over volume" doctrine — divesting ~500 company-owned stations/year in 2024–25, exiting fuel retail in some national markets, pivoting capex to EV charging — contrasts with Vitol, Koç and Zeren, all in expansion mode in Turkey. The concrete Turkish datapoint: in 2026 Shell agreed to transfer its airport aviation-fuel JV stakes (Antalya, Bodrum, İzmir) to **THY Opet**, exiting a business held since 2008. No evidence of a Turkish retail exit — the JV network is dealer-owned and growing — but STAS reporting emphasizes per-station profitability and dividends, not volume growth, which is consistent with deliberately ceding the volume war.
+
+**5. The discount/loyalty war (partial).**
+Domestic discount brands (Aytemiz, Alpet/TP, Güzel Enerji, Moil, Kadoil) have been eroding the big distributors' combined share (~9 points over recent years), and 75–80 TL/L diesel accelerates price-sensitive migration. PO runs mass Positive-point campaigns valid across PO *and* ex-BP stations; Opet stacks bank-card deals and high-profile advertising. Shell's ClubSmart offers are comparable in kind but not obviously in intensity. Pump prices are near-uniform under EPDK oversight, so the fight is via campaign depth, fleet-card terms and dealer economics — including reported aggressive poaching of well-located dealers at 5-year contract renewals (anecdotal).
+
+**Ruled out:** the June 2026 illegal-fuel crackdown (BADAY/BDY Group, 10 companies to TMSF trusteeship) was an LPG-sector operation among small distributors — not a factor in Shell-vs-PO/Opet diesel divergence.
+
+### 7.4 What this means for Shell's diesel numbers
+
+Putting Sections 2–4 and 7 together: Shell's diesel decline ≈ (market −3% and accelerating) × (a diesel book skewed to the fastest-shrinking segment) + (share leakage to a consolidated PO and an expanding, supply-advantaged Opet). In other words, roughly half the story is the market and half is competitive position — and the competitive half is concentrated in **fleet/commercial diesel**, not in the forecourt network, which is growing and out-earning the sector per site.
+
+### 7.5 Levers worth analyzing internally
+
+1. **Fleet/commercial channel push** — Shell's under-canopy share exceeds its all-channel share; the gap *is* the commercial channel. Benchmark fleet-card terms against PO AutoMatic/Filo Club and Opet's Koç-group corporate access; consider a border-corridor product answering PO's Border Pass (ÖTV/KDV-free transit diesel).
+2. **Supply contracts** — quantify Shell Türkiye's import vs Tüpraş-purchase mix and its landed-cost gap vs Opet/PO since Jan 2026; renegotiate domestic offtake while Tüpraş runs at 95%+ utilization.
+3. **Dealer renewals defense** — map the 5-year contract expiry calendar in freight-corridor locations against rival signing-bonus activity.
+4. **Double down where the market is coming to Shell** — gasoline/hybrid premium (V-Power) and EV charging (Shell Recharge/Eşarj partnership) are the growing segments and match Shell's existing franchise strengths.
+5. **Decompose your own decline** — split station-channel vs commercial-channel volume loss, and same-station diesel volumes vs network effects, to confirm how much is market vs share within your own data.
+
+---
+
+## 8. Data Caveats
 
 1. Direct access to data.tuik.gov.tr, epdk.gov.tr, petder.org.tr and odmd.org.tr PDFs was blocked in this research environment; official-bulletin figures were triangulated across ≥2 independent press reports each. **Verify key figures against the primary PDFs before external use:** EPDK *Petrol Piyasası Aylık Sektör Raporu*, EPDK annual reports, TÜİK *Motorlu Kara Taşıtları* bulletins, ODMD monthly press bulletins, PETDER sector reports.
 2. 2021/2023/2024 diesel tonnages marked "derived" are back-calculated from EPDK YoY percentages.
@@ -180,10 +238,12 @@ You asked what to analyze beyond the fleet's fuel/vehicle distribution. Based on
 4. PETDER reports volumes in m³ (diesel ~0.83 t/m³), EPDK in tonnes — never mix bases.
 5. ODMD fuel-type splits cover passenger cars only; the LCV segment is effectively all-diesel but not broken out.
 6. June 2026 EPDK data was not yet published at compile time (~7-week lag).
+7. Distributor market shares (Section 7) come from press reports of EPDK monthly tables; the month attribution of the ~606k/410k/370k t diesel volume split varies between reports (March vs May 2026) — the ranking and relative gaps are consistent, but pull the exact table from the EPDK monthly PDF before quoting. One-off outlier figures ("PO 34.9%", "Shell & Turcas 31.5%") circulating in secondary summaries are inconsistent with all other sources and were discarded.
+8. Company-level fuel import origins (who bought Russian-origin barrels 2023–25) are not published by EPDK; the Shell supply-cost inference in 7.3 is flagged as such. Consider an EPDK information request or PETDER annual tables.
 
 ---
 
-## 8. Sources
+## 9. Sources
 
 ### Official / primary
 - EPDK monthly petroleum sector reports: https://www.epdk.gov.tr/Detay/Icerik/3-0-104/petrolaylik-sektor-raporu
@@ -234,3 +294,23 @@ You asked what to analyze beyond the fleet's fuel/vehicle distribution. Based on
 - Russia sanctions / crude reshuffle: https://www.kpler.com/blog/rosneft-and-lukoil-sanctions-are-live-how-india-china-and-turkey-adapt-rather-than-exit
 - Illegal-fuel operation: https://www.malatyaguncel.com/akaryakit-sektorune-buyuk-operasyon-10-sirkete-ka-3097190h.htm
 - Rail year 2026: https://www.uab.gov.tr/haberler/2026-demiryolu-yili-olacak
+
+### Distributor competition (Section 7)
+- EPDK 2023 distributor shares (PO 21.90 / Shell 19.71 / Opet 18.93): https://www.enerjiekonomisi.com/akaryakit-pazar-paylari/30847
+- 2024 share shifts (domestic brands gain, Shell −0.3 pt): https://www.enerjiekonomisi.com/akaryakit-pazarinda-yerli-sirketler-payini-artirdi/30895
+- May 2026 top-5 volumes (PO 26.36%, Shell 20.43%, Opet 20.41%): https://www.enerjiekonomisi.com/ozel-haber-en-fazla-akaryakit-satan-ilk-5-sirket/43211
+- Diesel-by-brand monthly top-10: https://www.enerjiekonomisi.com/en-fazla-motorin-satan-ilk-10-sirket/42196 ; gasoline: https://www.enerjiekonomisi.com/en-fazla-benzin-satan-ilk-10-akaryakit-sirketi/42178 ; monthly top-10 shares: https://www.enerjiekonomisi.com/video/en-fazla-akaryakit-satan-ilk-10-sirket-epdk/42705
+- PO 2024 results (21.43%, 7 Mt): https://www.aa.com.tr/tr/enerjiterminali/sirket-haberleri/petrol-ofisi-grubu-yurt-ici-satislariyla-zirvedeki-yerini-korudu/50277
+- PO–BP acquisition: https://www.petrolofisi.com.tr/haberler-ve-duyurular/petrol-ofisi-grubu-bpnin-turkiyedeki-akaryakit-operasyonlarini-satin-aliyor ; Competition Board approval: https://www.rekabet.gov.tr/tr/Guncel/-bp-petrolleri-ve-bp-turkey-in-tum-hisse-683cdfba6376ef1193cf0050568585c9 ; merger completed (28 Feb 2025): https://www.aa.com.tr/tr/enerjiterminali/sirket-haberleri/petrol-ofisi-grubu-ile-bp-petrolleri-asnin-birlesme-islemleri-tamamlandi/47869 ; 460+ stations converted: https://www.dunya.com/sektorler/460tan-fazla-bp-istasyonu-petrol-ofisine-donustu-haberi-804972 ; BP brand exit by 1 Nov 2026: https://www.sozcu.com.tr/akaryakit-devinin-turkiye-ye-veda-edecegi-tarih-belli-oldu-tum-istasyonlari-o-markaya-donusturulecek-p147327
+- Opet expansion / leadership target: https://www.opet.com.tr/basin-bultenleri/opet-hiz-kesmeden-buyuyor-hedef-uc-yil-icinde-liderlik ; Q1 2025 fastest-growing (+12% vs sector +8%): https://www.aa.com.tr/tr/enerjiterminali/sirket-haberleri/opet-2025in-ilk-ceyreginde-sektorunun-en-cok-buyuyen-markasi-oldu/49601
+- Tüpraş investor presentation May 2026 (Opet 1,966 stations, 41.67% stake, Ditaş fleet): https://www.tupras.com.tr/assets/uploads/yatirimci-iliskileri/sunum/yatirimci-sunumu-mayis-2026.pdf
+- Dealer counts Feb 2024 (PO 1,942 / Opet 1,836 / Shell 1,202): https://www.enerjigunlugu.net/petrol-ofisi-akaryakit-dagitim-pazarinin-en-buyugu-56534h.htm ; https://www.enerjigunlugu.net/akaryakit-piyasasinda-bayi-sayisi-103-adet-artti-57818h.htm
+- Shell & Turcas profile (~1,250 sites end-2025, 21.5% onsite share, throughput 2.14x sector): https://www.turcas.com.tr/en/business/fuel-distribution-and-lubricants/shell-turcas-petrol ; STAS FY2025 board report: https://storage.fintables.com/media/uploads/kap-attachments/STAS%20YK%20Faaliyet%20Raporu%2031.12.2025.pdf ; Turcas 2025 results: https://www.ekonomim.com/sirketler/turcas-holding-2025-yili-finansal-sonuclarini-acikladi-haberi-892314
+- Shell global retail divestment / EV pivot: https://www.bloomberg.com/news/articles/2024-03-18/shell-plans-to-divest-1-000-retail-sites-in-shift-to-ev-charging ; https://www.cstoredive.com/news/why-and-where-shell-is-selling-1000-c-stores/712251/
+- Shell aviation JV exit to THY Opet: https://ekonomi.haber7.com/ekonomi/haber/3547722-akaryakit-devi-sektorden-cekiliyor-tum-hisselerini-thy-opete-devrediyor ; https://www.dunya.com/kose-yazisi/havacilikta-once-bp-satti-sira-shellde/785298
+- Russian-origin diesel dependence & export ban: https://www.haberler.com/ekonomi/rusya-nin-dizel-yasagi-turkiye-de-motorin-piyasasini-vurdu-20047240-haberi/ ; https://www.aydinlik.com.tr/haber/rusya-akaryakit-ihracati-yasagini-2027ye-kadar-uzatti-585197
+- PO commercial/fleet franchise (terminals, AutoMatic, Border Pass): https://ecoakaryakit.com.tr/hizmetlerimiz/petrol-ofisi/ ; https://petrolmatik.com/po-automatic-filo-kartlari/
+- Big-distributor share erosion to discount brands: https://enerjipostasi.com.tr/akaryakitta-buyuk-dagiticilarin-payi-9-puan-azaldi/
+- Marmara Depoculuk (Shell & Turcas storage, 255k m³): https://www.mdh.com.tr/
+- BADAY/LPG crackdown detail (not a white-products factor): https://www.sabah.com.tr/yasam/baday-grubuna-dev-operasyon-6-sirkete-el-konuldu-10-sirkete-kayyum-atandi-7608762
+- Monthly share league tables (open from corporate network): https://petrolpiyasasi.com/super-lig-pazar-payi-listesi/
