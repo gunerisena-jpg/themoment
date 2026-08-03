@@ -230,7 +230,52 @@ Putting Sections 2–4 and 7 together: Shell's diesel decline ≈ (market −3% 
 
 ---
 
-## 8. Data Caveats
+## 8. B2C Deep-Dive: Did Retail Diesel Shift to B2B, or to Competitors? — A Data Guide
+
+For a B2C (forecourt) analyst, the decline decomposes into three possible destinations for lost liters, each requiring different data:
+
+| Destination | Mechanism | Detectable with public data? |
+|---|---|---|
+| **(a) Demand destruction** | Passenger diesel park shrinking (hybrid/EV shift), price elasticity at 75–80 TL/L, less driving | Yes — Sections 2–4 (TÜİK fleet, EPDK volumes) |
+| **(b) B2C → B2B channel migration** | Same liters, different channel: businesses moving pump purchases onto fleet cards/TTS, corporates centralizing supply, UTTS formalization | Only partially — channel data is sector-level, not per company |
+| **(c) Loss to competitor forecourts** | PO/Opet loyalty ecosystems, ex-BP conversions, dealer poaching, discount-brand migration | Partially — brand shares are national; no company × province data |
+
+### 8.1 What EPDK publishes — and the two critical gaps
+
+**Available:**
+- **Province-level volumes (the strongest public dataset):** every EPDK monthly sector report carries annex **"Ek-1 İller Bazında Petrol Ürünü Teslimleri"** — motorin/benzin deliveries for all 81 provinces, monthly, current through May 2026. This is your geographic demand baseline.
+- **Company-level national sales and shares:** monthly distributor league tables (basis of Section 7).
+- **Channel split at sector level only:** istasyonlu bayi (station dealers), istasyonsuz bayi, serbest kullanıcı (licensed large consumers ≥5,000 t/yr buying direct), and ihrakiye are reported as aggregates. The Rekabet Kurumu sector report tabulates serbest-kullanıcı motorin deliveries 2016–2022.
+- **Station license registry (lisans sorgulama):** every bayilik license with address (il/ilçe) and the distributor it's tied to — a full district-level station census by brand is buildable, and the periodic license-action lists (new/amended/terminated, including **dağıtıcı-change amendments**) let you track dealer switching between brands over time. Third-party trackers (enerjilisans.com, petrolpiyasasi.com) compile these movements.
+- **Province/district pump prices:** bildirim.epdk.gov.tr price bulletins — local price-competition context.
+
+**Not public (the two gaps that block a direct answer):**
+1. **Company × channel:** no distributor-level retail-vs-commercial split is published (Shell's own retail vs fleet volumes are visible only internally). EPDK collects it via the bildirim system but treats it as commercially confidential.
+2. **Company × province:** EPDK publishes only the two marginals — company totals nationally, and all-company totals per province. The cross-matrix is confidential. TTS/fleet-card volumes (PO AutoMatic, Shell Filo, Opet TTS) are unpublished; UTTS rollout figures appear only as press milestones.
+
+### 8.2 Is there a B2C→B2B shift? What the sector-level evidence says
+
+Three sector-level signals suggest a real (but probably secondary) channel migration on top of the demand story:
+
+- **UTTS (Ulusal Taşıt Tanıma Sistemi):** since 2024–25, vehicles claiming fuel tax deductions must carry Darphane's UTTS units (~8M taxpayers expense fuel; installation deadlines ran to mid-2025). This structurally pushes business fuel purchases that used to look like anonymous B2C pump sales onto identified fleet/TTS rails — a *reclassification* of B2C liters as B2B, without any liter leaving the market. If your B2C series excludes TTS transactions, UTTS alone would depress measured B2C volume in 2025–26.
+- **Fleet-card economics in a price-shock year:** at 75–80 TL/L, SMEs and tradespeople have maximum incentive to formalize fuel into deductible, discounted fleet programs — and PO's AutoMatic/Positive ecosystem (now spanning ex-BP sites too) is the biggest gravity well.
+- **The surviving diesel demand is B2B by nature:** passenger (B2C) diesel is the structurally dying segment (park share 38.3%→32.1%; new-car share ~6%), while freight/fleet diesel merely cycles. So even with zero switching, the *mix* of remaining diesel shifts toward B2B every quarter.
+
+Against this: Shell's station-channel share (~21–21.8%) *exceeds* its all-channel share — Shell's problem is not its forecourt franchise, which out-earns the sector per site, but the small size of its commercial channel. For a Shell B2C analyst this cuts two ways: your channel is Shell's strongest, and your diesel decline is likely dominated by (a) demand destruction plus (b) reclassification into fleet rails — with (c) competitor loss concentrated in specific corridors and ex-BP catchments rather than nationwide.
+
+### 8.3 A practical triangulation method (public + internal data)
+
+1. **Build the geographic baseline:** EPDK Ek-1 province × month motorin series, 2023–2026. Compute each province's decline vs the national −3%. Provinces with outsized declines (border/freight provinces — Van, Hakkari, Ağrı, Şırnak, Gaziantep — or drought-hit agricultural provinces) flag *market* effects; provinces where the market held but your volume fell flag *share* effects.
+2. **Overlay your own station-level B2C sales** (internal) on the same province grid: your share of each province ≈ your volume ÷ Ek-1 total. Where your share fell, check the license registry for competitor station openings/brand conversions (especially **ex-BP→PO conversions, >460 completed by mid-2026**) within the same ilçe — that isolates destination (c).
+3. **Test the channel-migration hypothesis internally:** plot your own B2C pump diesel against your own (and sector) fleet/TTS diesel by month. A mirror image (B2C down, TTS up, sum flat) = migration; both down = demand destruction. Segment B2C customers who *stopped* buying: did their loyalty IDs reappear on Shell fleet cards (internal migration — not a loss at all) or vanish (churn)?
+4. **Demand controls:** TÜİK province-level vehicle stock by fuel type (il × yakıt tables in the Motorlu Kara Taşıtları annexes) to normalize for local diesel-park shrinkage; KGM annual traffic counts (AADT + heavy-vehicle share per road section) for corridor traffic; TCMB/EVDS weekly card-spending "akaryakıt" series — note that falling card fuel spend against stable EPDK volumes is itself a B2B-shift signal, since TTS postpaid volumes bypass card rails.
+5. **What only a data request can answer:** the company × channel and company × province cells. Options: an EPDK bilgi edinme (information) request for anonymized channel aggregates; PETDER member data (company × product, national); or commissioning the registry-scrape + Ek-1 model above as the best public approximation.
+
+**Bottom line:** the precise question — "did Shell's B2C diesel go to B2B or to competitors, district by district" — is not answerable from public data alone, because both critical cross-tabs are confidential. But the triangulation above (public province volumes + license registry + your internal channel and loyalty data) can attribute the decline to the three destinations with reasonable confidence, and your internal fleet-card and loyalty-ID data is the single most decisive input.
+
+---
+
+## 9. Data Caveats
 
 1. Direct access to data.tuik.gov.tr, epdk.gov.tr, petder.org.tr and odmd.org.tr PDFs was blocked in this research environment; official-bulletin figures were triangulated across ≥2 independent press reports each. **Verify key figures against the primary PDFs before external use:** EPDK *Petrol Piyasası Aylık Sektör Raporu*, EPDK annual reports, TÜİK *Motorlu Kara Taşıtları* bulletins, ODMD monthly press bulletins, PETDER sector reports.
 2. 2021/2023/2024 diesel tonnages marked "derived" are back-calculated from EPDK YoY percentages.
@@ -243,7 +288,7 @@ Putting Sections 2–4 and 7 together: Shell's diesel decline ≈ (market −3% 
 
 ---
 
-## 9. Sources
+## 10. Sources
 
 ### Official / primary
 - EPDK monthly petroleum sector reports: https://www.epdk.gov.tr/Detay/Icerik/3-0-104/petrolaylik-sektor-raporu
@@ -314,3 +359,16 @@ Putting Sections 2–4 and 7 together: Shell's diesel decline ≈ (market −3% 
 - Marmara Depoculuk (Shell & Turcas storage, 255k m³): https://www.mdh.com.tr/
 - BADAY/LPG crackdown detail (not a white-products factor): https://www.sabah.com.tr/yasam/baday-grubuna-dev-operasyon-6-sirkete-el-konuldu-10-sirkete-kayyum-atandi-7608762
 - Monthly share league tables (open from corporate network): https://petrolpiyasasi.com/super-lig-pazar-payi-listesi/
+
+### Data sources for the B2C/channel analysis (Section 8)
+- EPDK monthly sector report incl. Ek-1 province tables: https://www.epdk.gov.tr/Detay/Icerik/3-0-104/petrolaylik-sektor-raporu
+- EPDK license query (station census by il/ilçe and brand): https://www.epdk.gov.tr/Detay/Icerik/3-0-0-1155/lisanslar
+- EPDK license actions (new/amended/terminated — tracks dealer brand switches): https://www.epdk.gov.tr/Detay/Icerik/3-0-88/petrollisans-islemleri ; electronic list: https://www.epdk.gov.tr/Detay/Icerik/3-0-112/petrolelektronik-lisans-islemleri ; third-party tracker: http://www.enerjilisans.com/epdk-petrol-piyasasi
+- EPDK province/district pump-price bulletins: https://bildirim.epdk.gov.tr/bildirim-portal/faces/pages/tarife/petrol/yonetim/petrolBultenRapor.xhtml ; https://www.epdk.gov.tr/Detay/Icerik/3-0-0-1205/illere-gore-akaryakit-bayi-fiyatlari-raporu
+- Rekabet Kurumu Akaryakıt Sektör İncelemesi Raporu (Jan 2024 — channel structure, serbest kullanıcı series 2016–2022, dealer-contract framework): https://www.rekabet.gov.tr/Dosya/akaryakit-sektor-incelemesi-raporu-20240318105053196.pdf
+- PETDER member sales data (company × product, national): https://www.petder.org.tr/tr-TR/akaryakit-satis-verileri/628809
+- Serbest kullanıcı license definition (Petrol Piyasası Lisans Yönetmeliği): https://www.lexpera.com.tr/mevzuat/yonetmelikler/petrol-piyasasi-lisans-yonetmeligi
+- UTTS rollout: https://www.petrolofisi.com.tr/filo-yonetimi/ulusal-tasit-tanima-sistemi-utts ; https://bigpara.hurriyet.com.tr/haberler/ekonomi-haberleri/10-soruda-utts_ID1603611/
+- TÜİK province-level vehicle stock by fuel: https://data.tuik.gov.tr (Motorlu Kara Taşıtları bulletin annex tables)
+- KGM traffic statistics (AADT, heavy-vehicle share): https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Istatistikler/TrafikveUlasimBilgileri/25TrafikUlasimBilgileri.pdf
+- TCMB card-spending statistics (akaryakıt category, weekly): https://evdsf5.tcmb.gov.tr ; BKM monthly sector series: https://bkm.com.tr/secilen-aya-ait-sektorel-gelisim/
